@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../styles/Signin.css";
 
 const Signin = () => {
   const [email, setEmail] = useState("");
@@ -50,7 +51,7 @@ const Signin = () => {
   };
 
   return (
-    <div>
+    <div className="signin-container">
       <input
         id="email"
         className="SigninemailInputBox"
