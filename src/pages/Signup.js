@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import logo from "../assets/img/logo.svg";
 import { useNavigate } from "react-router-dom";
+import "../styles/Signup.css";
+import backward from "../assets/img/backward.svg";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -18,6 +21,7 @@ const Signup = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setEmailError("올바른 형식의 이메일을 입력해주세요.");
+      alert("올바른 형식의 이메일을 입력해주세요.");
       return;
     }
 
@@ -61,37 +65,43 @@ const Signup = () => {
   };
 
   return (
-    <div>
-      <p>OnePage에 회원가입하세요</p>
+    <div className="signup-container">
+      <img src={logo} alt="logoimage" className="logo" />
+      <p>하루한장</p>
       <div className="input">
-        <label htmlFor="name">이름</label>
+        <label className="name">이름</label>
         <input
-          id="name"
+          className="nameInput"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
           onKeyDown={handleKeyPress}
         />
-        <label htmlFor="email">이메일</label>
+        <label className="email">이메일</label>
         <input
-          id="email"
+          className="emailInput"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           onKeyDown={handleKeyPress}
         />
-        {emailError && <p className="error-message">{emailError}</p>}
-        <label htmlFor="password">비밀번호</label>
+        <label className="password">비밀번호</label>
         <input
-          id="password"
+          className="passwordInput"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           onKeyDown={handleKeyPress}
         />
       </div>
-      <button onClick={handleSubmit}>확인</button>
-      <span onClick={handleBack}>&lt;</span>
+      <button onClick={handleSubmit} className="submit">
+        회원가입
+      </button>
+      {/* <bu onClick={handleBack} className="backward">
+        &lt;
+      </bu> */}
+      <h5 className="ment">회원가입</h5>
+      <img src={backward} alt="backwardimage" className="backward" />
     </div>
   );
 };
