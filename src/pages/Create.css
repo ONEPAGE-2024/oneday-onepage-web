@@ -1,0 +1,65 @@
+body {
+  background-color: #fbfbfb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 600px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.txtContainer {
+  font-size: 18px;
+  align-self: flex-start;
+}
+
+.txtWeather {
+  margin-top: -30px;
+}
+
+.todayDate {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  width: 95px;
+  height: 25px;
+  margin-top: 8px;
+}
+
+.txtEmotion {
+  margin-top: 40px;
+}
+
+.txtDiary {
+  margin-top: 20px;
+}
+
+.diaryContainer {
+  width: 550px;
+  height: 200px;
+  border: none;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+
+.registerBtn {
+  width: 100px;
+  height: 40px;
+  background-color: #ffaa46;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
