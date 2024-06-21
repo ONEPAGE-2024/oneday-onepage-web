@@ -1,12 +1,3 @@
-body {
-  background-color: #fbfbfb;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
 .container {
   width: 600px;
   height: 100vh;
@@ -22,7 +13,7 @@ body {
 }
 
 .txtWeather {
-  margin-top: -30px;
+  margin-top: 110px;
 }
 
 .todayDate {
@@ -34,7 +25,11 @@ body {
 }
 
 .txtEmotion {
-  margin-top: 40px;
+  margin-top: 20px;
+}
+
+.txtHashtag {
+  margin-top: 20px;
 }
 
 .txtDiary {
@@ -60,6 +55,50 @@ body {
   font-weight: 500;
   color: white;
   cursor: pointer;
-  align-self: flex-end;
+  margin-top: 10px;
+  margin-left: auto;
   justify-content: flex-end;
+}
+
+.emotionButtons {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.emotionButton {
+  font-size: 40px;
+  width: 100px;
+  height: 80px;
+  margin-right: 12px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  background-color: #f3f3f3;
+}
+
+.emotionButton.selected {
+  background-color: lightgreen;
+}
+
+.hashtagButtons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.hashtagButton {
+  background-color: #f3f3f3;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.hashtagButton.selected {
+  background-color: #ffb4b4;
 }

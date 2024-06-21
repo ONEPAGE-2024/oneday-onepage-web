@@ -7,7 +7,7 @@ const Diary = () => {
   return (
     <>
       <div className="container">
-        <Header title="2024년 6월" />
+        <Header title="내 일기 목록" />
         <button className="createBtn" onClick={() => navigate("/create")}>
           일기 추가
         </button>
