@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import logo from "../assets/img/logo.svg";
 import "../styles/Signin.css";
 
 const Signin = () => {
@@ -52,9 +53,12 @@ const Signin = () => {
 
   return (
     <div className="signin-container">
+      <img src={logo} alt="logoimage" className="logo" />
+      <p>하루한장</p>
+      <label className="Signinemail">이메일</label>
       <input
         id="email"
-        className="SigninemailInputBox"
+        className="emailInputBox"
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
@@ -64,7 +68,7 @@ const Signin = () => {
       <label className="Signinpassword">비밀번호</label>
       <input
         id="password"
-        className="SigninpasswordInputBox"
+        className="passwordInputBox"
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
@@ -73,9 +77,11 @@ const Signin = () => {
       <button className="Signinbutton" onClick={handleLogin}>
         로그인
       </button>
-      <div className="Signinnavigate" onClick={handleSignUp}>
+      <span className="Signinnavigate" onClick={handleSignUp}>
         회원가입
-      </div>
+      </span>
+      <h5 className="bar">|</h5>
+      <span className="findpassword">비밀번호 찾기</span>
     </div>
   );
 };
