@@ -1,0 +1,155 @@
+.signup-container {
+  background-color: #fdb578;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 751px;
+  height: 983px;
+  padding: 20px;
+  left: 491px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+}
+.name {
+  /* 이름 */
+  position: absolute;
+  width: 35px;
+  height: 20px;
+  left: 218px;
+  top: 454px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 20px;
+  color: #ffffff;
+}
+.nameInput {
+  position: absolute;
+  width: 319.46px;
+  height: 46.73px;
+  left: 208px;
+  top: 485px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  border-style: none;
+}
+.email {
+  /* 이메일 */
+  position: absolute;
+  width: 77px;
+  height: 20px;
+  left: 218px;
+  top: 549px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 23px;
+  color: #ffffff;
+}
+.emailInput {
+  position: absolute;
+  width: 319.46px;
+  height: 47.58px;
+  left: 208px;
+  top: 580px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  border-style: none;
+}
+.password {
+  /* 비밀번호 */
+  position: absolute;
+  width: 117px;
+  height: 20px;
+  left: 218px;
+  top: 644px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 23px;
+  color: #ffffff;
+}
+.passwordInput {
+  position: absolute;
+  width: 319.46px;
+  height: 47.58px;
+  left: 208px;
+  top: 675px;
+  border-style: none;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+.logo {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 200px;
+}
+
+.signup-container p {
+  position: absolute;
+  width: 70px;
+  height: 24px;
+  left: 340px;
+  top: 380px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.signup-container .error-message {
+  color: red;
+  margin-top: 5px;
+}
+
+.submit {
+  position: absolute;
+  width: 133px;
+  height: 50px;
+  left: 310px;
+  top: 750px;
+  background: #ffffff;
+  border-radius: 20px;
+  border-style: none;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 23px;
+  color: #fdb578;
+  cursor: pointer;
+}
+
+.signup-container span {
+  font-size: 20px;
+  cursor: pointer;
+}
+.backward {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 45px;
+  top: 50px;
+}
+.ment {
+  position: absolute;
+  width: 83px;
+  height: 29px;
+  left: 88px;
+  top: 17px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
