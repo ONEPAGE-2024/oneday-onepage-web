@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import "./Diary.css";
+import "../styles/Diary.css";
 import { useNavigate } from "react-router-dom";
 
 const Diary = () => {
