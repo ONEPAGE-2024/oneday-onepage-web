@@ -1,0 +1,36 @@
+.header {
+  width: 600px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.monthContainer {
+  width: 100%;
+  max-width: 600px;
+  border-bottom: 1px solid #dfdfdf;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.month {
+  font-size: 25px;
+  margin: 35px;
+}
+
+.button {
+  width: 34px;
+  height: 34px;
+  border-radius: 50px;
+  border: none;
+  font-size: 20px;
+  color: #878787;
+  cursor: pointer;
+}
