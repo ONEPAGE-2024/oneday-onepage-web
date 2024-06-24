@@ -28,7 +28,7 @@ const Signup = () => {
     }
 
     try {
-      const response = await axios.post("http://3.38.61.26:8080/user/signup", {
+      const response = await axios.post("http://3.38.61.26:80/user/signup", {
         email: email,
         password: password,
         name: name,
