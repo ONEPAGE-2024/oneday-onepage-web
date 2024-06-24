@@ -6,9 +6,13 @@ const Header = ({ title }) => {
   return (
     <div className="header">
       <div className="monthContainer">
-        <button className="button" onClick={() => navigate(-1)}>{"<"}</button>
+        <button className="button" onClick={() => navigate(-1)}>
+          {"<"}
+        </button>
         <div className="month">{title}</div>
-        <button className="button" onClick={() => navigate(+1)}>{">"}</button>
+        <button className="button" onClick={() => navigate(+1)}>
+          {">"}
+        </button>
       </div>
     </div>
   );

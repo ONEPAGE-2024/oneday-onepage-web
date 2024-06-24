@@ -1,4 +1,4 @@
-import "./Create.css";
+import "../styles/Create.css";
 import Header from "../components/Header";
 import axios from "axios";
 import { useState } from "react";
