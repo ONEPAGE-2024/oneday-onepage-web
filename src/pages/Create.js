@@ -24,7 +24,7 @@ const Create = () => {
   const handleRegister = async () => {
     try {
       const response = await axios.post(
-        "http://10.80.163.119:8080/diary/create",
+        "http://10.80.162.25:8080/diary/create",
         {
           emotion: selectedEmotion,
           hashtags: hashtags.join(", "),
