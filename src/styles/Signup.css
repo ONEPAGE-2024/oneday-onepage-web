@@ -7,7 +7,8 @@
   width: 751px;
   height: 983px;
   padding: 20px;
-  left: 491px;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 }
@@ -116,7 +117,7 @@
   width: 133px;
   height: 50px;
   left: 310px;
-  top: 800px;
+  top: 750px;
   background: #ffffff;
   border-radius: 20px;
   border-style: none;

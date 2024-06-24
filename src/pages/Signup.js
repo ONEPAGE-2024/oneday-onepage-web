@@ -9,6 +9,7 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
+  const [signupMessage, setSignupMessage] = useState("");
   const navigate = useNavigate();
 
   const handleBack = () => {
@@ -21,7 +22,6 @@ const Signup = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setEmailError("올바른 형식의 이메일을 입력해주세요.");
-      alert("올바른 형식의 이메일을 입력해주세요.");
       return;
     }
 
@@ -41,20 +41,15 @@ const Signup = () => {
       const result = await response.json();
       console.log(result);
 
-      if (result.message === "회원 가입이 완료 되었습니다!") {
-        alert("회원가입 성공!");
-        if (typeof signin === "function") {
-          // signin({ name, token: result.TOKEN });
-        } else {
-          console.warn("signin 함수가 정의되지 않았습니다.");
-        }
+      if (response.ok) {
+        setSignupMessage("회원가입 성공!");
         navigate("/signin");
       } else {
-        alert("회원가입 실패!");
+        setSignupMessage("회원가입 실패!");
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("에러입니다!");
+      setSignupMessage("에러입니다!");
     }
   };
 
@@ -85,6 +80,7 @@ const Signup = () => {
           onChange={(e) => setEmail(e.target.value)}
           onKeyDown={handleKeyPress}
         />
+        {emailError && <p className="error-message">{emailError}</p>}
         <label className="password">비밀번호</label>
         <input
           className="passwordInput"
@@ -97,11 +93,13 @@ const Signup = () => {
       <button onClick={handleSubmit} className="submit">
         회원가입
       </button>
-      {/* <bu onClick={handleBack} className="backward">
-        &lt;
-      </bu> */}
-      <h5 className="ment">회원가입</h5>
-      <img src={backward} alt="backwardimage" className="backward" />
+      {signupMessage && <p className="signup-message">{signupMessage}</p>}
+      <img
+        src={backward}
+        alt="backwardimage"
+        className="backward"
+        onClick={handleBack}
+      />
     </div>
   );
 };
