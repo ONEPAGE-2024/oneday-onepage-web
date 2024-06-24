@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
-import "./Diary.css";
+import "../styles/Diary.css"
 import { deletePost, fetchPosts } from "../api";
 
 const Diary = ({ diaries, deleteDiary }) => {

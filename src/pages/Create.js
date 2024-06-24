@@ -2,7 +2,7 @@ import "../styles/Create.css";
 import Header from "../components/Header";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { createPost } from "../api";
+import { createPost } from "../api"
 
 const Create = () => {
   const [selectedDate, setSelectedDate] = useState("");
