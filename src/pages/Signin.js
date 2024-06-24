@@ -18,7 +18,7 @@ const Signin = () => {
     }
 
     try {
-      const response = await fetch("http://10.80.162.25:8080/user/signin", {
+      const response = await fetch("http://3.38.61.26:8080/user/signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",

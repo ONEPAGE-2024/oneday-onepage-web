@@ -26,7 +26,7 @@ const Signup = () => {
     }
 
     try {
-      const response = await fetch("http://10.80.162.25:8080/user/signup", {
+      const response = await fetch("http://3.38.61.26:8080/user/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -38,15 +38,15 @@ const Signup = () => {
         }),
       });
 
-      const result = await response.json();
-      console.log(result);
-
-      if (response.ok) {
-        setSignupMessage("회원가입 성공!");
-        navigate("/signin");
-      } else {
+      if (!response.ok) {
+        const result = await response.json();
+        console.log(result);
         setSignupMessage("회원가입 실패!");
+        return;
       }
+
+      setSignupMessage("회원가입 성공!");
+      navigate("/signin");
     } catch (error) {
       console.error("Error:", error);
       setSignupMessage("에러입니다!");
