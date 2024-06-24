@@ -1,4 +1,4 @@
-import "./Create.css";
+import "../styles/Create.css";
 import Header from "../components/Header";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -40,6 +40,7 @@ const Create = () => {
       const response = await createPost(postData);
       console.log("일기가 생성되었습니다:", response.data);
       navigate("/");
+
     } catch (error) {
       console.error("일기를 생성하는데 오류가 생겼습니다:", error);
     }

@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import "./App.css";
+import Header from "./components/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Diary from "./pages/Diary";
 import Create from "./pages/Create";
-import Edit from "./pages/Edit";
-import "./App.css";
-import DiaryDetail from "./pages/DiaryDetail";
 
 function App() {
   const [diaries, setDiaries] = useState([]);
@@ -27,20 +25,10 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/diary/:id" element={<DiaryDetail />} />
-          <Route
-            path="/"
-            element={<Diary diaries={diaries} deleteDiary={deleteDiary} />}
-          />
-          <Route path="/create" element={<Create addDiary={addDiary} />} />
-          <Route
-            path="/edit/:id"
-            element={<Edit diaries={diaries} updateDiary={updateDiary} />}
-          />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Diary />} />
+        <Route path="/create" element={<Create />} />
+      </Routes>
     </Router>
   );
 }
