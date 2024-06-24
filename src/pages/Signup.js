@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/img/logo.svg";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import "../styles/Signup.css";
 import backward from "../assets/img/backward.svg";
 
@@ -19,6 +20,7 @@ const Signup = () => {
   const handleSubmit = async () => {
     setEmailError("");
 
+    // 이메일 유효성 검사
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setEmailError("올바른 형식의 이메일을 입력해주세요.");
@@ -26,22 +28,17 @@ const Signup = () => {
     }
 
     try {
-      const response = await fetch("http://3.38.61.26:8080/user/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email,
-          password: password,
-          name: name,
-        }),
+      const response = await axios.post("http://3.38.61.26:8080/user/signup", {
+        email: email,
+        password: password,
+        name: name,
       });
 
-      if (!response.ok) {
-        const result = await response.json();
+      const result = response.data;
+
+      if (!response.status === 200) {
         console.log(result);
-        setSignupMessage("회원가입 실패!");
+        setSignupMessage(result.message || "회원가입 실패!");
         return;
       }
 
