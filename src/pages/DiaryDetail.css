@@ -1,0 +1,53 @@
+.diaryDetailContainer {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .diaryDetailContent {
+    font-size: 16px;
+  }
+  
+  .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .date,
+  .emotion {
+    margin-bottom: 16px;
+  }
+
+  .emotion {
+    margin-top: -5px;
+  }
+  
+  .content {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .hashtag {
+    font-style: italic;
+    color: #40AFAF;
+    margin-bottom: 30px;
+  }
+  
+  .editBtn {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .editBtn:hover {
+    background-color: #45a049;
+  }

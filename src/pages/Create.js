@@ -1,6 +1,7 @@
 import "./Create.css";
 import Header from "../components/Header";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { createPost } from "../api";
 
 const Create = () => {
@@ -8,13 +9,14 @@ const Create = () => {
   const [hashtag, setHashtag] = useState([]);
   const [content, setContent] = useState("");
   const [selectedEmotion, setSelectedEmotion] = useState("happy");
+  const navigate = useNavigate();
 
   const emotions = [
     { id: "happy", icon: "😊" },
     { id: "sad", icon: "😢" },
     { id: "angry", icon: "😡" },
-    { id: "excited", icon: "🙁" },
-    { id: "calm", icon: "🙂" },
+    { id: "notbad", icon: "🙁" },
+    { id: "good", icon: "🙂" },
   ];
 
   const handleEmotionClick = (emotionId) => {
@@ -24,7 +26,7 @@ const Create = () => {
   const handleRegister = async () => {
     try {
       const postData = {
-        id: 1, // 임시 ID 설정 (서버가 자동으로 설정할 수 있음)
+        id: 1, 
         emotion: selectedEmotion,
         hashtag: hashtag,
         content: content,
@@ -37,6 +39,7 @@ const Create = () => {
 
       const response = await createPost(postData);
       console.log("일기가 생성되었습니다:", response.data);
+      navigate("/");
     } catch (error) {
       console.error("일기를 생성하는데 오류가 생겼습니다:", error);
     }

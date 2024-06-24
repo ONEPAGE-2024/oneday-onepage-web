@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://10.80.162.25:8080";
+const BASE_URL = "http://3.38.61.26";
 
 // 일기 목록 가져오기
 export const fetchPosts = () => {
@@ -9,7 +9,7 @@ export const fetchPosts = () => {
 
 // 일기 상세 정보 가져오기
 export const fetchPost = (id) => {
-  return axios.get(`${BASE_URL}/diary/${id}`);
+  return axios.get(`${BASE_URL}/diary/${id}`).then((res) => res.data);
 };
 
 // 일기 수정
@@ -37,9 +37,8 @@ export const createPost = async (post) => {
 };
 
 // 글 삭제
-export const deletePost = (id, password) => {
+export const deletePost = (id) => {
   return axios.delete(`${BASE_URL}/diary/delete/${id}`, {
-    data: { password },
     headers: {
       "Content-Type": "application/json",
     },
