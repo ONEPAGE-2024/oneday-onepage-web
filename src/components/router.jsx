@@ -1,8 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Signup from "../pages/Signup";
 import Signin from "../pages/Signin";
-import Diary from "../pages/Diary";
 import Create from "../pages/Create";
+import Diary from "../pages/Diary";
+
 const Router = () => {
   return (
     <BrowserRouter>
