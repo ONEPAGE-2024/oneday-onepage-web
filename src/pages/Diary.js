@@ -1,6 +1,10 @@
 import Header from "../components/Header";
 import "../styles/Diary.css";
+<<<<<<< Updated upstream
 import { useNavigate } from "react-router-dom";
+=======
+import { deletePost, fetchPosts } from "../api";
+>>>>>>> Stashed changes
 
 const Diary = () => {
   const navigate = useNavigate();

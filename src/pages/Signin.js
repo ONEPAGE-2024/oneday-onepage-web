@@ -31,7 +31,7 @@ const Signin = () => {
       const result = await response.json();
       console.log("Response from server:", result);
       if (result.token) {
-        navigate("/");
+        navigate("/diary");
       } else {
         setEmailError("로그인 실패! 이메일이나 비밀번호를 확인하세요.");
       }
